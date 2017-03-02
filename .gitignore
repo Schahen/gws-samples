@@ -1,0 +1,14 @@
+.idea
+*.iml
+*.iws
+*.ipr
+*.generated
+
+target
+
+*.log
+
+.cache
+
+*~
+__pycache__
