@@ -7,4 +7,5 @@ import jetbrains.jetpad.model.property.WritableProperty;
 
 public class SomeModel {
     final public Property<String> text = new ValueProperty<>("HEY!");
+    final public Property<Boolean> flag = new ValueProperty<>(true);
 }
