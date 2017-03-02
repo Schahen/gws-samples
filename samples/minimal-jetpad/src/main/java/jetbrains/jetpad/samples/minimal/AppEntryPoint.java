@@ -18,16 +18,17 @@ package jetbrains.jetpad.samples.minimal;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
+import jetbrains.jetpad.samples.minimal.mappers.SomeViewMapper;
+import jetbrains.jetpad.samples.minimal.models.SomeModel;
 
 import static com.google.gwt.query.client.GQuery.$;
 
 public class AppEntryPoint implements EntryPoint {
     @Override
     public void onModuleLoad() {
+        SomeViewMapper someViewMapper = new SomeViewMapper(new SomeModel());
 
-        Element div = DOM.createDiv();
-        div.setInnerHTML("I hadrly can imagine more useless GWT example!");
-        $("#wrapper").append(div);
+        $("#wrapper").append(someViewMapper.getTarget().getElement());
     }
 
 
