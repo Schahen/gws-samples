@@ -30,12 +30,11 @@ public class AppEntryPoint implements EntryPoint {
         SomeModel model = new SomeModel();
 
         SomeViewMapper someViewMapper = new SomeViewMapper(model);
+        someViewMapper.attachRoot();
+
         $("#wrapper").append(someViewMapper.getTarget().getElement());
 
-
-        Window.alert("AND NOW IT WILL CHANGE!!!!");
-
-        someViewMapper.getSource().text.set("LALALAALA");
+        someViewMapper.getSource().text.set("That is one good dynamic property");
     }
 
 
