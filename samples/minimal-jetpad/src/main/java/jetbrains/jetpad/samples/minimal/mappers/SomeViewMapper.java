@@ -6,6 +6,7 @@ import jetbrains.jetpad.samples.minimal.models.SomeModel;
 import jetbrains.jetpad.samples.minimal.views.SomeView;
 
 import static jetbrains.jetpad.mapper.gwt.DomUtil.innerTextOf;
+import static jetbrains.jetpad.mapper.gwt.DomUtil.hasClass;
 
 public class SomeViewMapper extends Mapper<SomeModel, SomeView> {
 
@@ -13,13 +14,12 @@ public class SomeViewMapper extends Mapper<SomeModel, SomeView> {
         super(source, new SomeView());
     }
 
-
     @Override
     protected void registerSynchronizers(SynchronizersConfiguration conf) {
         super.registerSynchronizers(conf);
-        //conf.add(Synchronizers.forPropsTwoWay(getSource().text, innerTextOf(getTarget().text)))
+
+        conf.add(Synchronizers.forPropsOneWay(getSource().text, innerTextOf(getTarget().text)));
     }
 }
 
 
-//class TodoListItemMapper extends Mapper<TodoListItem, TodoListItemView> {

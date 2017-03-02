@@ -18,6 +18,7 @@ package jetbrains.jetpad.samples.minimal;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.Window;
 import jetbrains.jetpad.samples.minimal.mappers.SomeViewMapper;
 import jetbrains.jetpad.samples.minimal.models.SomeModel;
 
@@ -26,9 +27,15 @@ import static com.google.gwt.query.client.GQuery.$;
 public class AppEntryPoint implements EntryPoint {
     @Override
     public void onModuleLoad() {
-        SomeViewMapper someViewMapper = new SomeViewMapper(new SomeModel());
+        SomeModel model = new SomeModel();
 
+        SomeViewMapper someViewMapper = new SomeViewMapper(model);
         $("#wrapper").append(someViewMapper.getTarget().getElement());
+
+
+        Window.alert("AND NOW IT WILL CHANGE!!!!");
+
+        someViewMapper.getSource().text.set("LALALAALA");
     }
 
 
