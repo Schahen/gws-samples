@@ -1,0 +1,30 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'>
+    <div>
+        Well, it's more likely it's enough to change only styling but
+        you can change view - that said, you can have different DOM tree.
+        <h1 style="color: red">
+            FOR
+        </h1>
+        <h1 style="color: yellow">
+            THE
+        </h1>
+        <h1 style="color: green">
+            SAME
+        </h1>
+        <h1 style="color: magenta">
+            MODEL
+        </h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>This is completely a different layout!</td>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    <div ui:field="text"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</ui:UiBinder>
