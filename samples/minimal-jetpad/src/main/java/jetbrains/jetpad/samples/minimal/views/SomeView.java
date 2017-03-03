@@ -22,9 +22,6 @@ public class SomeView extends BaseWithElement{
     @UiField
     public InputElement flag;
 
-    @UiField
-    public  Element flagDescription;
-
     interface SomeViewUiInterface extends UiBinder<Element, SomeView> {}
 }
 
