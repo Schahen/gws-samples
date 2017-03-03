@@ -8,8 +8,6 @@ import jetbrains.jetpad.model.property.WritableProperty;
 import jetbrains.jetpad.samples.minimal.models.SomeModel;
 import jetbrains.jetpad.samples.minimal.views.SomeView;
 
-import javax.lang.model.element.Element;
-
 import static jetbrains.jetpad.mapper.gwt.DomUtil.checkbox;
 import static jetbrains.jetpad.mapper.gwt.DomUtil.innerTextOf;
 import static jetbrains.jetpad.mapper.gwt.DomUtil.hasClass;

@@ -1,10 +1,8 @@
 package jetbrains.jetpad.samples.minimal.views;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.InputElement;
-import com.google.gwt.thirdparty.common.css.compiler.gssfunctions.GssFunctions;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import jetbrains.jetpad.mapper.gwt.BaseWithElement;
@@ -19,7 +17,7 @@ public class SomeView extends BaseWithElement{
     }
 
     @UiField
-    public DivElement text;
+    public Element text;
 
     @UiField
     public InputElement flag;
